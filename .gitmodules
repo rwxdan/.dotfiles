@@ -7,3 +7,18 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:rwxdan/init.lua
+[submodule ".config/zsh/site-functions/zsh-completions"]
+	path = .config/zsh/site-functions/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule ".config/zsh/plugins/zsh-syntax-highlighting"]
+	path = .config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".config/zsh/plugins/zsh-abbr"]
+	path = .config/zsh/plugins/zsh-abbr
+	url = https://github.com/olets/zsh-abbr
+[submodule ".config/zsh/plugins/zsh-autosuggestions"]
+	path = .config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/zsh/plugins/zsh-autopair"]
+	path = .config/zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
