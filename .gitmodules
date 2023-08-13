@@ -1,9 +1,3 @@
-[submodule ".config/tmux"]
-	path = .config/tmux
-	url = git@github.com:rwxdan/tmux.conf
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = git@github.com:rwxdan/init.lua
 [submodule ".config/zsh/site-functions/zsh-completions"]
 	path = .config/zsh/site-functions/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
