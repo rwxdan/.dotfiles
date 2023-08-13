@@ -1,0 +1,27 @@
+[global]
+font = JetBrains Mono 10
+icon_position = left
+corner_radius = 0
+frame_width = 2
+gap_size = 8
+max_icon_size = 48
+fullscreen = delay
+frame_color = "#8ff0a4"
+separator_color= frame
+offset = 8x32
+
+[urgency_low]
+background = "#242424"
+foreground = "#f2f2f2"
+timeout = 5
+
+[urgency_normal]
+background = "#242424"
+foreground = "#f2f2f2"
+timeout = 5
+
+[urgency_critical]
+background = "#242424"
+foreground = "#f2f2f2"
+frame_color = "#f66151"
+timeout = 30

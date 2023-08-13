@@ -1,0 +1,70 @@
+# ~/.config/i3status/config
+
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+    color_good = "#8ff0a4"
+    color_bad = "#ff7b63"
+}
+
+order += "wireless wlp3s0"
+order += "ethernet enp2s0"
+order += "path_exists VPN"
+order += "battery 0"
+order += "disk /"
+order += "memory"
+order += "load"
+order += "cpu_temperature 0"
+order += "time"
+
+wireless wlp3s0 {
+    format_up = "W: %essid S:%quality"
+    format_down = "W: down"
+}
+
+ethernet enp2s0 {
+    format_up = "E: %ip"
+    format_down = "E: down"
+}
+
+battery 0 {
+    format = "%status %percentage %remaining %emptytime"
+    format_down = "No battery"
+	format_percentage = "%.00f%s"
+	last_full_capacity = true
+	threshold_type = "time"
+    status_bat = "🔋 BAT"
+    status_chr = "⚡ CHR"
+    status_unk = "? UNK"
+    status_full = "☻ FULL"
+    path = "/sys/class/power_supply/BAT%d/uevent"
+    low_threshold = 30
+}
+
+path_exists VPN {
+    path = "/proc/sys/net/ipv4/conf/wg0"
+}
+
+time {
+    format = "%Y-%m-%d %I:%M %p"
+}
+
+load {
+    format = "C: %5min"
+}
+
+cpu_temperature 0 {
+    format = "T: %degrees °C"
+    path = "/sys/class/thermal/thermal_zone2/temp"
+}
+
+memory {
+    format = "M: %used"
+    threshold_degraded = "10%"
+    format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+    format = "D: %free"
+}

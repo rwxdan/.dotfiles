@@ -1,0 +1,12 @@
+[user]
+	name = Daniel Castro
+	email = rwxdan@gmail.com
+	signingkey = /home/daniel/.ssh/id_git.key
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

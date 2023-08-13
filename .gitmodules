@@ -1,0 +1,9 @@
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = git@github.com:rwxdan/tmux.conf
+[submodule ".config/zsh"]
+	path = .config/zsh
+	url = git@github.com:rwxdan/zdotdir
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:rwxdan/init.lua
