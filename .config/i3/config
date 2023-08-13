@@ -56,7 +56,7 @@ client.focused_inactive $ibg_color $ibg_color $text_color $ibg_color
 client.urgent $ubg_color $ubg_color $text_color $ubg_color
 
 bar {
-	position top
+    position top
     status_command i3status
     colors {
         background $ibg_color
