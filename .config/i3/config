@@ -15,9 +15,6 @@ exec $no_id xset b 0
 exec $no_id xset r rate 450 30
 exec $no_id xsetroot -cursor_name left_ptr
 exec $no_id nm-applet
-exec $no_id nextcloud --background
-exec $no_id flameshot
-exec $no_id redshift
 
 # VARIABLES
 # modkey
