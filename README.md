@@ -19,5 +19,5 @@ See [requirements.txt](./requirements.txt)
    cd .dotfiles
    stow . -t ~/
    ```
-3. ???
+3. ❓❓❓
 4. Profit.
