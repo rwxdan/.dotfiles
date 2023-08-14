@@ -4,7 +4,7 @@ This is mostly for myself but anyway
 
 ## Requirements
 
-See [requirements.txt](./requirements.txt)
+See [dependencies.txt](./dependencies.txt)
 
 ## Installation
 

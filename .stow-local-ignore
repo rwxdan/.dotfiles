@@ -24,4 +24,4 @@ _darcs
 # CUSTOM
 
 /.gitmodules
-/requirements.txt
+/dependencies.txt
