@@ -24,6 +24,9 @@
     status = auto
     branch = auto
     pager = true
+[pull]
+	default = current
+	rebase = true
 [rebase]
     autosquash = true
 [rerere]
