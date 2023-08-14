@@ -2,6 +2,7 @@ return {
 	"ellisonleao/gruvbox.nvim",
 	priority = 1000,
 	lazy = false,
+	enabled = false,
 	config = function()
 		require("gruvbox").setup({
 			italic = {
