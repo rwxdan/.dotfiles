@@ -20,8 +20,8 @@ order += "cpu_temperature 0"
 order += "time"
 
 wireless wlp3s0 {
-    format_up = "W: %essid S:%quality"
-    format_down = "W: down"
+    format_up = " %essid%quality"
+    format_down = " down"
 }
 
 ethernet enp2s0 {
