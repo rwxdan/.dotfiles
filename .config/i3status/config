@@ -68,7 +68,7 @@ memory {
 }
 
 disk "/" {
-    format = " 󰒋 %free "
+    format = " 󰒋 %used / %total "
 }
 
 volume master {
