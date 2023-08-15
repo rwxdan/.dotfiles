@@ -15,6 +15,7 @@ exec $no_id xset b 0
 exec $no_id xset r rate 450 30
 exec $no_id xsetroot -cursor_name left_ptr
 exec $no_id nm-applet
+exec $no_id volumeicon
 
 # VARIABLES
 # modkey
@@ -54,7 +55,7 @@ client.urgent $ubg_color $ubg_color $text_color $ubg_color
 
 bar {
     position top
-    status_command i3status
+    status_command i3blocks
     colors {
         background $ibg_color
         statusline $text_color
