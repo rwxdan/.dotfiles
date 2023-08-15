@@ -159,11 +159,14 @@ fi
 [[ -x $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
 
 # Initialize fnm (Fast Node Manager)
-export PATH="${XDG_DATA_HOME}/fnm:$PATH"
+[[ -d ${XDG_DATA_HOME}/fnm ]] && PATH="${XDG_DATA_HOME}/fnm:$PATH"
 [[ -x $(command -v fnm) ]] && eval "$(fnm env --use-on-cd)"
 
-# Add cargo to $PATH
-export PATH="${XDG_DATA_HOME}/cargo/bin:$PATH"
+# Add cargo/bin to $PATH
+[[ -d ${XDG_DATA_HOME}/cargo/bin ]] && PATH="${XDG_DATA_HOME}/cargo/bin:$PATH"
+
+# Add go/bin to $PATH
+[[ -d ${XDG_DATA_HOME}/go/bin ]] && PATH="${XDG_DATA_HOME}/go/bin:$PATH"
 
 # Load zsh-syntax-highlighting plugin
 if [[ -r ${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh ]]; then
