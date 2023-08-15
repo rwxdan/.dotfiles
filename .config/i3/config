@@ -14,6 +14,7 @@ exec_always $no_id xset dpms 600
 exec_always $no_id xset b 0
 exec_always $no_id xset r rate 450 30
 exec_always $no_id xsetroot -cursor_name left_ptr
+exec_always $no_id setxkbmap -layout us,es -option 'grp:alt_space_toggle'
 exec $no_id nm-applet
 exec $no_id volumeicon
 
