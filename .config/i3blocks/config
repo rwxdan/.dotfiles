@@ -18,6 +18,7 @@ label=
 interval=5
 
 [load_average]
+label=󰄨
 interval=15
 
 [temperature]
