@@ -1,3 +1,7 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # "If not running interactively, don't do anything"
 [[ $- != *i* ]] && return
 
@@ -167,6 +171,8 @@ if [[ -r ${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plug
     . ${ZDOTDIR}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 fi
 
-# Initialize Starship prompt
-[[ -x $(command -v starship) ]] && eval "$(starship init zsh)"
+[[ -r ${ZDOTDIR}/plugins/powerlevel10k/powerlevel10k.zsh-theme ]] && \
+    . ${ZDOTDIR}/plugins/powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
