@@ -17,6 +17,7 @@ i3blocks
 i3lock
 i3wm
 lazygit
+lm-sensors
 nemo
 neovim
 pactl
