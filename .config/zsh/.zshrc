@@ -139,12 +139,6 @@ fi
 [[ -r ${ZDOTDIR}/plugins/command-not-found/command-not-found.plugin.zsh ]] && \
   . ${ZDOTDIR}/plugins/command-not-found/command-not-found.plugin.zsh
 
-# Load zsh-abbr plugin
-if [[ -r ${ZDOTDIR}/plugins/zsh-abbr/zsh-abbr.plugin.zsh ]]; then
-  declare -x ABBR_USER_ABBREVIATIONS_FILE="${ZDOTDIR}/zsh-abbr/user-abbreviations"
-  . ${ZDOTDIR}/plugins/zsh-abbr/zsh-abbr.plugin.zsh
-fi
-
 # Load zsh-autosuggestions plugin 
 if [[ -r ${ZDOTDIR}/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh ]]; then
   . ${ZDOTDIR}/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
