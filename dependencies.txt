@@ -1,5 +1,6 @@
 alacritty
 bat
+bc
 brightnessctl
 curl
 dex
@@ -12,6 +13,7 @@ flameshot
 fzf
 git
 gnome-keyring
+i3blocks
 i3lock
 i3wm
 lazygit
@@ -27,6 +29,7 @@ starship
 stow
 tmux
 tree-sitter-cli
+volumeicon
 wget
 xrdb
 xsel
