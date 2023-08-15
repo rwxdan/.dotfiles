@@ -26,7 +26,6 @@ pavucontrol
 playerctl
 picom
 polkit-gnome
-starship
 stow
 tmux
 tree-sitter-cli
