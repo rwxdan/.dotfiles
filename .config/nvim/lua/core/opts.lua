@@ -17,7 +17,6 @@ vim.opt.scl = "yes" -- signcolumn
 vim.opt.wb = false -- writebackup
 vim.opt.so = 10 -- scrolloff
 vim.opt.ut = 50 -- updatetime
-vim.opt.shm = "I" -- shortmess
 vim.opt.tgc = true -- termguicolors
 vim.opt.cul = true -- cursorline
 vim.opt.fcs = { eob = " " } -- fillchars
