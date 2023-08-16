@@ -1,11 +1,11 @@
 # ~/.config/i3/config
 
 set $no_id --no-startup-id
-
+set $locker i3lock --nofork --ignore-empty-password --color=242424
 # Startup programs
 exec $no_id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec $no_id dex --autostart --environment i3
-exec $no_id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec $no_id xss-lock --transfer-sleep-lock -- $locker
 exec $no_id picom --config ~/.config/picom/picom.conf
 exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.png
 exec $no_id dunst -config ~/.config/dunst/dunstrc
@@ -102,7 +102,7 @@ bindsym $mod+d exec $no_id i3-dmenu-desktop --dmenu="dmenu -i -fn 'JetBrainsMono
 # Dmenu script to only show Power options
 bindsym $mod+p exec $no_id ~/.local/bin/dmenu_power
 # Screen locker
-bindsym $mod+x exec $no_id i3lock --nofork
+bindsym $mod+x exec $no_id $locker
 
 # change focus
 bindsym $mod+h focus left
