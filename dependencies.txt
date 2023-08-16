@@ -20,6 +20,7 @@ lazygit
 lm-sensors
 nemo
 neovim
+network-manager-applet
 numlockx
 pactl
 pamixer
@@ -32,10 +33,10 @@ tmux
 tree-sitter-cli
 volumeicon
 wget
-xrdb
-xsel
-xset
-xsetroot
+xorg-xrdb
+xorg-xsel
+xorg-xset
+xorg-xsetroot
 xss-lock
 zoxide
 zsh
