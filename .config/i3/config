@@ -7,7 +7,7 @@ exec $no_id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec $no_id dex --autostart --environment i3
 exec $no_id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec $no_id picom --config ~/.config/picom/picom.conf
-exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/ismail-inceoglu-chaos-invoked.jpg
+exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.png
 exec $no_id dunst -config ~/.config/dunst/dunstrc
 exec_always $no_id xrdb -load ~/.config/X11/Xresources
 exec_always $no_id xset dpms 600
@@ -43,8 +43,8 @@ set $browser brave-browser
 # Options
 font pango:$font_family 9
 gaps inner 4
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
 floating_modifier $mod
 
 # Order:
