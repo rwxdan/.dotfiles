@@ -20,6 +20,7 @@ lazygit
 lm-sensors
 nemo
 neovim
+numlockx
 pactl
 pamixer
 pavucontrol
