@@ -136,9 +136,6 @@ fi
 # Alias `cat` to `bat` if it exists on path
 [[ -x $(command -v bat) ]] && alias cat="bat"
 
-# Alias `find` to `fd` if it exists on path
-[[ -x $(command -v fd) ]] && alias find="fd"
-
 # Load command-not-found plugin
 [[ -r ${ZDOTDIR}/plugins/command-not-found/command-not-found.plugin.zsh ]] && \
   . ${ZDOTDIR}/plugins/command-not-found/command-not-found.plugin.zsh
