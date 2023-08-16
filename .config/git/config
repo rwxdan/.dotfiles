@@ -1,7 +1,7 @@
 [user]
 	name = Daniel Castro
 	email = rwxdan@gmail.com
-	signingkey = /home/daniel/.ssh/id_git.key
+	signingkey = ~/.ssh/id_rsa
 [core]
     editor = vim
 [credential]
