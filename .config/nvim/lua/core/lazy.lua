@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {
 	install = {
 		missing = true,
-		colorscheme = { "gruvbox", "habamax" },
+		colorscheme = { "onedark", "habamax" },
 	},
 	ui = {
 		border = "rounded",
