@@ -20,7 +20,7 @@ vim.opt.ut = 50 -- updatetime
 vim.opt.tgc = true -- termguicolors
 vim.opt.cul = true -- cursorline
 vim.opt.fcs = { eob = " " } -- fillchars
-vim.opt.cot = "menu,noselect" -- completeopt
+vim.opt.cot = "menuone,noselect" -- completeopt
 vim.opt.udir = os.getenv("HOME") .. "/.local/share/nvim/undo" -- undodir
 vim.opt.undofile = true
 vim.opt.filetype = "on"
