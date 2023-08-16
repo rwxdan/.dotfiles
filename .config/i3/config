@@ -33,15 +33,13 @@ set $active_wp #3584e4
 set $active_bd #78aeed
 set $focused_wp #1a5fb4
 set $focused_bd #3584e4
-# font
-set $font_family JetBrainsMonoSemiBold
 # applications
 set $file_manager nemo
 set $term alacritty
 set $browser brave-browser
 
 # Options
-font pango:$font_family 9
+font pango:JetBrainsMonoSemiBold 9
 gaps inner 4
 default_border pixel 2
 default_floating_border pixel 2
