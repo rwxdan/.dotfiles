@@ -1,17 +1,17 @@
 [user]
-	name = Daniel Castro
-	email = rwxdan@gmail.com
-	signingkey = ~/.ssh/id_rsa
+    name = Daniel Castro
+    email = rwxdan@gmail.com
+    signingkey = ~/.ssh/id_rsa
 [core]
     editor = vim
 [credential]
-	helper = store
+    helper = store
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [gpg]
-	format = ssh
+    format = ssh
 [commit]
-	gpgsign = true
+    gpgsign = true
 [alias]
     st = status
     logg = log --graph --decorate --oneline --all
@@ -25,8 +25,8 @@
     branch = auto
     pager = true
 [pull]
-	default = current
-	rebase = true
+    default = current
+    rebase = true
 [rebase]
     autosquash = true
 [rerere]
