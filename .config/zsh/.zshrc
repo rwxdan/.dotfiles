@@ -111,6 +111,12 @@ zstyle ':completion:*:kill:*'   force-list always
 # Let's make completion matches case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# Sanitize my file management
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias mkdir="mkdir -pv"
+alias rm="rm -i"
+
 # Colorize my output
 if [[ -x $(command -v dircolors) ]]; then
     test -r ~/.dir_colors && \
