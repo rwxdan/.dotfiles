@@ -24,8 +24,9 @@ exec $no_id volumeicon
 set $mod Mod4
 # window colors
 set $text_color #f2f2f2
-set $bg_color #99c1f1
-set $ibg_color #242424
+set $active_text_color #90c2ff
+set $bg_color #313131
+set $ibg_color #1e1e1e
 set $ubg_color #c01c28
 set $indicator_color #3584e4
 # i3bar colors
@@ -42,14 +43,12 @@ set $browser brave-browser
 # Options
 font pango:JetBrainsMonoSemiBold 9
 gaps inner 4
-default_border pixel 2
-default_floating_border pixel 2
 floating_modifier $mod
 
 # Order:
 # <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused $bg_color $bg_color $ibg_color $indicator_color $bg_color
-client.unfocused $ibg_color $ibg_color $bg_color $ibg_color $ibg_color
+client.focused $bg_color $bg_color $active_text_color $indicator_color $bg_color
+client.unfocused $ibg_color $ibg_color $text_color $ibg_color $ibg_color
 client.focused_inactive $ibg_color $ibg_color $text_color $ibg_color
 client.urgent $ubg_color $ubg_color $text_color $ubg_color
 
