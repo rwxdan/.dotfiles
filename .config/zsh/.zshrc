@@ -17,11 +17,11 @@ fpath=(
 # Set HISTFILE location
 declare -x HISTFILE=${XDG_DATA_HOME}/zsh/zsh_history
 
-# Set HISTSIZE to 5k lines (in the current session)
-declare -x HISTSIZE=5000
+# Set HISTSIZE to 100k lines (in the current session)
+declare -x HISTSIZE=100000
 
-# Set SAVEHIST to 10k lines (in the HISTFILE)
-declare -x SAVEHIST=10000
+# Set SAVEHIST to the HISTSIZE value
+declare -x SAVEHIST=${HISTSIZE}
 
 # List of characters that should be considered as part of a word
 declare -x WORDCHARS="*?_-~=&;.!#$%^"
@@ -32,6 +32,12 @@ declare -x PROMPT_EOL_MARK=''
 # setopt's array
 declare -a OPTS=(
   "autocd"
+  "always_to_end"
+  "auto_list"
+  "auto_menu"
+  "auto_pushd"
+  "complete_in_word"
+  "append_history"
   "extended_history"
   "extendedglob"
   "hist_expire_dups_first"
@@ -40,14 +46,21 @@ declare -a OPTS=(
   "hist_save_no_dups"
   "hist_verify"
   "inc_append_history"
+  "interactive_comments"
   "globdots"
-  "nomatch"
+  "no_beep"
+  "nocaseglob"
+  "nonomatch"
+  "no_sh_word_split"
+  "notify"
+  "numeric_glob_sort"
+  "prompt_subst"
+  "pushd_ignore_dups"
+  "share_history"
 )
 
 setopt ${OPTS[@]}
 unset OPTS
-# Turn off annoying beeps - TTY oriented
-unsetopt beep
 
 # Use emacs keybinds
 bindkey -e
@@ -114,6 +127,9 @@ fi
 
 # Alias `wget` to itself but keeping wget-hsts somewhere else
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
+
+# Run apps with the dedicated gpu
+alias prime-run='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
 
 # Let's not cd ../../../ all the way up
 # (I use zoxide, btw)
