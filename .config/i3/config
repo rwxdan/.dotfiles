@@ -24,10 +24,10 @@ exec $no_id volumeicon
 set $mod Mod4
 # window colors
 set $text_color #f2f2f2
-set $bg_color #1a5fb4
+set $bg_color #99c1f1
 set $ibg_color #242424
 set $ubg_color #c01c28
-set $indicator_color #99c1f1
+set $indicator_color #3584e4
 # i3bar colors
 set $separator #77767b
 set $active_wp #3584e4 
@@ -48,8 +48,8 @@ floating_modifier $mod
 
 # Order:
 # <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused $bg_color $bg_color $text_color $indicator_color $bg_color
-client.unfocused $ibg_color $ibg_color $indicator_color $ibg_color $ibg_color
+client.focused $bg_color $bg_color $ibg_color $indicator_color $bg_color
+client.unfocused $ibg_color $ibg_color $bg_color $ibg_color $ibg_color
 client.focused_inactive $ibg_color $ibg_color $text_color $ibg_color
 client.urgent $ubg_color $ubg_color $text_color $ubg_color
 
