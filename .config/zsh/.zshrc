@@ -115,7 +115,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias mkdir="mkdir -pv"
-alias rm="rm -i"
+alias rm="rm -Iv"
 
 # Colorize my output
 if [[ -x $(command -v dircolors) ]]; then
