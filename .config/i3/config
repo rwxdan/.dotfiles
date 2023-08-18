@@ -1,22 +1,41 @@
 # ~/.config/i3/config
 
+# Shorten --no-startup-id
 set $no_id --no-startup-id
+# Store i3lock parameters on a single place
 set $locker i3lock --ignore-empty-password --color=242424
-# Startup programs
+# STARTUP PROGRAMS
+# Authentication agent
 exec $no_id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+# Read and launch .desktop files from '~/.config/autostart'
 exec $no_id dex --autostart --environment i3
+# X Screen Saver utility to: listen to screen events and
+# launch an external locker (i3lock)
 exec $no_id xss-lock --transfer-sleep-lock -- $locker
+# Compositor
 exec $no_id picom --config ~/.config/picom/picom.conf
+# Set wallpaper
 exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.png
+# Notification daemon
 exec $no_id dunst -config ~/.config/dunst/dunstrc
+# Load Xresources (Wayland anyone?)
 exec_always xrdb -load ~/.config/X11/Xresources
+# Turn off screen after 10 minutes (Default, I think, but anyway)
 exec_always xset dpms 600
+# No BEEP please
 exec_always xset b 0
+# Set keyboard auto-repeat rate
 exec_always xset r rate 450 30
+# Again, wayland anyone?
 exec_always xsetroot -cursor_name left_ptr
+# Set keyboard layouts and the ability to swap between them 
+# with ALT + Space
 exec_always setxkbmap -layout us,es -option 'grp:alt_space_toggle'
+# Turn on numpad
 exec_always numlockx on
+# Network manager applet (Network management)
 exec $no_id nm-applet
+# Volumeicon  (Control volume levels)
 exec $no_id volumeicon
 
 # VARIABLES
