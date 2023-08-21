@@ -1,7 +1,7 @@
 # ~/.zprofile
 
 # Load environment variables 
-[ -f $HOME/.config/zsh/.zshenv ]  && source -- $HOME/.config/zsh/.zshenv
+[ -f $HOME/.config/zsh/.zshenv ] && source -- $HOME/.config/zsh/.zshenv
 
 # Include user's bin directory
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
