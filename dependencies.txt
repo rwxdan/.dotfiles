@@ -15,14 +15,13 @@ git
 gnome-keyring
 i3blocks
 i3lock
-i3wm
+i3-wm
 lazygit
-lm-sensors
+lm_sensors
 nemo
 neovim
 network-manager-applet
 numlockx
-pactl
 pamixer
 pavucontrol
 playerctl
@@ -34,9 +33,9 @@ tree-sitter-cli
 volumeicon
 wget
 xorg-xrdb
-xorg-xsel
 xorg-xset
 xorg-xsetroot
+xsel
 xss-lock
 zoxide
 zsh
