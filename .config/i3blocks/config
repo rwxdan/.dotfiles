@@ -6,36 +6,36 @@ markup=none
 separator=false
 
 [memory]
-label=
+label= 
 interval=10
 
 [disk]
-label=󰒋
+label=󰒋 
 interval=30
 
 [cpu_usage]
-label=
+label= 
 interval=5
 
 [load_average]
-label=󰄨
+label=󰄨 
 interval=15
 
 [temperature]
-label=󰔏
+label=󰔏 
 interval=10
 
 [brightness]
-label=󰃠
+label=󰃠 
 interval=5
 
 [battery]
-label=󰁹
+label=󰁹 
 instance=0
 interval=10
 
 [time]
-label=󰥔
+label=󰥔 
 command=date '+%Y-%m-%d %I:%M %p'
 interval=5
 min_width=FFFFFFFFFFFFFFFFFFFFFFF
