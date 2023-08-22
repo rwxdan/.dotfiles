@@ -6,7 +6,7 @@ set $no_id --no-startup-id
 set $locker i3lock --ignore-empty-password --color=242424
 # STARTUP PROGRAMS
 # Authentication agent
-exec $no_id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+exec $no_id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Read and launch .desktop files from '~/.config/autostart'
 exec $no_id dex --autostart --environment i3
 # X Screen Saver utility to: listen to screen events and
