@@ -57,7 +57,7 @@ set $focused_bd #3584e4
 # applications
 set $file_manager nemo
 set $term alacritty
-set $browser brave-browser
+set $browser brave
 
 # Options
 font pango:JetBrainsMonoSemiBold 9
