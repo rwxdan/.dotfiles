@@ -56,7 +56,7 @@ set $focused_wp #1a5fb4
 set $focused_bd #3584e4
 # applications
 set $file_manager nemo
-set $term alacritty
+set $term kitty
 set $browser brave
 
 # Options
