@@ -31,8 +31,8 @@ picom
 polkit-gnome
 stow
 sysstat
-ttf-nerd-font-symbols
-ttf-nerd-font-symbols-mono
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono
 tmux
 tree-sitter-cli
 volumeicon
