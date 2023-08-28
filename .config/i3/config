@@ -15,7 +15,10 @@ exec $no_id xss-lock --transfer-sleep-lock -- $locker
 # Compositor
 exec $no_id picom --config ~/.config/picom/picom.conf
 # Set wallpaper
-exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.png
+exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.jpg
+# Start AT-SPI2 Protocol
+exec $no_id /usr/lib/at-spi-bus-launcher --launch-immediately
+exec $no_id /usr/lib/at-spi2-registryd
 # Notification daemon
 exec $no_id dunst -config ~/.config/dunst/dunstrc
 # Load Xresources (Wayland anyone?)
