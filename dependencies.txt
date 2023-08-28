@@ -1,3 +1,5 @@
+acpi
+acpid
 alacritty
 bat
 bc
@@ -28,6 +30,7 @@ playerctl
 picom
 polkit-gnome
 stow
+sysstat
 tmux
 tree-sitter-cli
 volumeicon
