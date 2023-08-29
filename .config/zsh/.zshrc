@@ -143,6 +143,11 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 
+# Get my public ip
+if [[ -x $(command -v curl) ]] && [[ $(command -v jq) ]]; then
+  alias whats-my-ip="curl https://ipinfo.io 2>/dev/null | jq -r '.ip'"
+fi
+
 # Alias `ls` to `exa` if it exists on path
 if [[ -x $(command -v exa) ]]; then
   alias ls="exa"
