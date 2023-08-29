@@ -8,6 +8,10 @@ exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY XDG_CU
 exec --no-startup-id systemctl --user import-environment DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP
 # Authentication agent
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# Network manager applet (Network management)
+exec --no-startup-id nm-applet
+# Volumeicon  (Control volume levels)
+exec --no-startup-id volumeicon
 # Read and launch .desktop files from '~/.config/autostart'
 exec --no-startup-id dex --autostart --environment i3
 # X Screen Saver utility to: listen to screen events and
@@ -37,21 +41,16 @@ exec_always xsetroot -cursor_name left_ptr
 exec_always setxkbmap -layout us,es -option 'grp:alt_space_toggle'
 # Turn on numpad
 exec_always numlockx on
-# Network manager applet (Network management)
-exec --no-startup-id nm-applet
-# Volumeicon  (Control volume levels)
-exec --no-startup-id volumeicon
 
 # VARIABLES
 # modkey
 set $mod Mod4
 # window colors
 set $text_color #f2f2f2
-set $active_text_color #90c2ff
-set $bg_color #313131
+set $bg_color #1a5fb4
 set $ibg_color #1e1e1e
 set $ubg_color #c01c28
-set $indicator_color #3584e4
+set $indicator_color #78aeed
 # i3bar colors
 set $separator #77767b
 set $active_wp #3584e4 
@@ -68,10 +67,12 @@ font pango:JetBrainsMonoSemiBold 9
 gaps inner 4
 floating_modifier $mod
 focus_follows_mouse no
+default_border pixel 2
+default_floating_border pixel 2
 
 # Order:
 # <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused $bg_color $bg_color $active_text_color $indicator_color $bg_color
+client.focused $bg_color $bg_color $text_color $indicator_color $bg_color
 client.unfocused $ibg_color $ibg_color $text_color $ibg_color $ibg_color
 client.focused_inactive $ibg_color $ibg_color $text_color $ibg_color
 client.urgent $ubg_color $ubg_color $text_color $ubg_color
@@ -82,7 +83,6 @@ bar {
     colors {
         background $ibg_color
         statusline $text_color
-        separator $separator
         focused_workspace $focused_bd $focused_wp $text_color
         active_workspace $active_bd $active_wp $text_color
         inactive_workspace $ibg_color $ibg_color $text_color
