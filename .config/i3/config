@@ -1,26 +1,27 @@
 # ~/.config/i3/config
 
-# Shorten --no-startup-id
-set $no_id --no-startup-id
 # Store i3lock parameters on a single place
 set $locker i3lock --ignore-empty-password --color=242424
 # STARTUP PROGRAMS
+# Update environment variables used by dbus-daemon
+exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP
+exec --no-startup-id systemctl --user import-environment DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_SESSION_DESKTOP
 # Authentication agent
-exec $no_id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Read and launch .desktop files from '~/.config/autostart'
-exec $no_id dex --autostart --environment i3
+exec --no-startup-id dex --autostart --environment i3
 # X Screen Saver utility to: listen to screen events and
 # launch an external locker (i3lock)
-exec $no_id xss-lock --transfer-sleep-lock -- $locker
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 # Compositor
-exec $no_id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 # Set wallpaper
-exec $no_id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.jpg
 # Start AT-SPI2 Protocol
-exec $no_id /usr/lib/at-spi-bus-launcher --launch-immediately
-exec $no_id /usr/lib/at-spi2-registryd
+exec --no-startup-id /usr/lib/at-spi-bus-launcher --launch-immediately
+exec --no-startup-id /usr/lib/at-spi2-registryd
 # Notification daemon
-exec $no_id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 # Load Xresources (Wayland anyone?)
 exec_always xrdb -load ~/.config/X11/Xresources
 # Turn off screen after 10 minutes (Default, I think, but anyway)
@@ -37,9 +38,9 @@ exec_always setxkbmap -layout us,es -option 'grp:alt_space_toggle'
 # Turn on numpad
 exec_always numlockx on
 # Network manager applet (Network management)
-exec $no_id nm-applet
+exec --no-startup-id nm-applet
 # Volumeicon  (Control volume levels)
-exec $no_id volumeicon
+exec --no-startup-id volumeicon
 
 # VARIABLES
 # modkey
@@ -66,6 +67,7 @@ set $browser brave
 font pango:JetBrainsMonoSemiBold 9
 gaps inner 4
 floating_modifier $mod
+focus_follows_mouse no
 
 # Order:
 # <colorclass> <border> <background> <text> <indicator> <child_border>
@@ -88,18 +90,18 @@ bar {
     }
 }
 
-bindsym XF86AudioRaiseVolume exec $no_id pamixer --increase 5
-bindsym XF86AudioLowerVolume exec $no_id pamixer --decrease 5
-bindsym XF86AudioMute exec $no_id pamixer --toggle-mute
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pamixer --increase 5"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pamixer --decrease 5"
+bindsym XF86AudioMute exec --no-startup-id "pamixer --toggle-mute"
 
 # Use playerctl to control media players
-bindsym XF86AudioPlay exec $no_id playerctl play-pause
-bindsym XF86AudioNext exec $no_id playerctl next
-bindsym XF86AudioPrev exec $no_id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Use brightnessctl to adjust brightness
-bindsym XF86MonBrightnessUp exec $no_id "brightnessctl set 10%+"
-bindsym XF86MonBrightnessDown exec $no_id "brightnessctl set 10%-"
+bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set 10%+"
+bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 10%-"
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -120,11 +122,11 @@ tiling_drag modifier titlebar
 bindsym $mod+q kill
 
 # Use i3's dmenu fork
-bindsym $mod+d exec $no_id i3-dmenu-desktop --dmenu="dmenu -i -fn 'JetBrainsMono SemiBold-10'"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'JetBrainsMono SemiBold-10'"
 # Dmenu script to only show Power options
-bindsym $mod+p exec $no_id ~/.local/bin/dmenu_power
+bindsym $mod+p exec --no-startup-id ~/.local/bin/dmenu_power
 # Screen locker
-bindsym $mod+x exec $no_id $locker
+bindsym $mod+x exec --no-startup-id $locker
 
 # change focus
 bindsym $mod+h focus left
