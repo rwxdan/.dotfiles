@@ -29,6 +29,7 @@ pavucontrol
 playerctl
 picom
 polkit-gnome
+ripgrep
 stow
 sysstat
 ttf-nerd-fonts-symbols
