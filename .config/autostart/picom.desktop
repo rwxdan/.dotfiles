@@ -4,6 +4,6 @@ Type=Application
 NoDisplay=false
 Name=picom
 Categories=Utility;
-Exec=/usr/bin/picom
+Exec=picom
 StartupNotify=false
 Terminal=false

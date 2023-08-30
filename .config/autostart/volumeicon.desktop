@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/usr/bin/volumeicon
+Exec=volumeicon
 Name=volumeicon
 Type=Application
 Terminal=false
