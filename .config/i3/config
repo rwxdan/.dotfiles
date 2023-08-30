@@ -20,7 +20,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- $locker
 # Compositor
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 # Set wallpaper
-exec --no-startup-id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.jpg
+exec --no-startup-id feh --no-fehbg --bg-fill -F ~/Pictures/mountains.png
 # Start AT-SPI2 Protocol
 exec --no-startup-id /usr/lib/at-spi-bus-launcher --launch-immediately
 exec --no-startup-id /usr/lib/at-spi2-registryd
