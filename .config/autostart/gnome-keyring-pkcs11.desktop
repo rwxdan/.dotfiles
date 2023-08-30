@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Comment=GNOME Keyring: PKCS#11 Component
+Exec=/usr/bin/gnome-keyring-daemon --start --components=pkcs11
+NoDisplay=true
+Terminal=false
+StartupNotify=false

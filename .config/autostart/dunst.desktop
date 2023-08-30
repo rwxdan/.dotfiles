@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/usr/bin/dunst -config ~/.config/dunst/dunstrc
+Name=dunst
+Comment=A customizable and lightweight notification-daemon
+Type=Application
+Terminal=false
+StartupNotify=false
