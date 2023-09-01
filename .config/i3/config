@@ -92,15 +92,15 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "brightnessctl set 10%+"
 bindsym XF86MonBrightnessDown exec --no-startup-id "brightnessctl set 10%-"
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec --no-startup-id $term
 # Terminal + tmux
-bindsym Mod1+Return exec $term -e tmux
+bindsym Mod1+Return exec --no-startup-id $term -e tmux
 # File manager
-bindsym $mod+n exec $file_manager
+bindsym $mod+n exec --no-startup-id $file_manager
 # Browser
-bindsym $mod+Shift+b exec $browser
+bindsym $mod+Shift+b exec --no-startup-id $browser
 # Use Print key to launch flameshot
-bindsym Print exec flameshot gui
+bindsym Print exec --no-startup-id flameshot gui
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
